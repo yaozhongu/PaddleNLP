@@ -93,7 +93,7 @@ def dense_faq_pipeline():
     pipe = SemanticSearchPipeline(retriever, ranker)
 
     pipeline_params = {"Retriever": {"top_k": 50}, "Ranker": {"top_k": 1}}
-    prediction = pipe.run(query="企业如何办理养老保险", params=pipeline_params)
+    prediction = pipe.run(query="如何办理养老保险", params=pipeline_params)
 
     print_documents(prediction, print_name=False, print_meta=True)
 
